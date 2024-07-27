@@ -1,58 +1,89 @@
 [
-    {
-      "name": "Fiction",
-      "subCategories": [
-        {
-          "name": "Romance",
-          "id": "1-romance",
-          "productIds": [1, 2, 3]
-        },
-        {
-          "name": "Mystery",
-          "id": "2-mystery",
-          "productIds": [4, 5, 6]
-        },
-        {
-          "name": "Science Fiction",
-          "id": "3-science-fiction",
-          "productIds": [7, 8, 9]
-        }
-      ]
-    },
-    {
-      "name": "Non-Fiction",
-      "subCategories": [
-        {
-          "name": "Biography",
-          "id": "1-biography",
-          "productIds": [10, 11, 12]
-        },
-        {
-          "name": "Self-Help",
-          "id": "2-self-help",
-          "productIds": [13, 14, 15]
-        },
-        {
-          "name": "History",
-          "id": "3-history",
-          "productIds": [16, 17, 18]
-        }
-      ]
-    },
-    {
-      "name": "Children's Books",
-      "subCategories": [
-        {
-          "name": "Picture Books",
-          "id": "1-picture-books",
-          "productIds": [19, 20, 21]
-        },
-        {
-          "name": "Early Readers",
-          "id": "2-early-readers",
-          "productIds": [22, 23, 24]
-        }
-      ]
-    }
-  ]
-  
+  {
+    "name": "Fiction",
+    "subCategories": [
+      {
+        "name": "Romance",
+        "id": "1-romance",
+        "productIds": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "name": "Mystery",
+        "id": "2-mystery",
+        "productIds": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "name": "Science Fiction",
+        "id": "3-science-fiction",
+        "productIds": [
+          7,
+          8,
+          9
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Non-Fiction",
+    "subCategories": [
+      {
+        "name": "Biography",
+        "id": "1-biography",
+        "productIds": [
+          10,
+          11,
+          12
+        ]
+      },
+      {
+        "name": "Self-Help",
+        "id": "2-self-help",
+        "productIds": [
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "name": "History",
+        "id": "3-history",
+        "productIds": [
+          16,
+          17,
+          18
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Children's Books",
+    "subCategories": [
+      {
+        "name": "Picture Books",
+        "id": "1-picture-books",
+        "productIds": [
+          19,
+          20,
+          21
+        ]
+      },
+      {
+        "name": "Early Readers",
+        "id": "2-early-readers",
+        "productIds": [
+          22,
+          23,
+          24
+        ]
+      }
+    ]
+  }
+]

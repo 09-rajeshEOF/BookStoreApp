@@ -9,6 +9,7 @@ import Profile from './src/screens/Profile';
 import BookList from './src/screens/BookList';
 import Orders from './src/screens/Orders';
 import HomeScreen from './src/screens/HomeScreen';
+import Upload from './src/screens/Upload';
 const Tab = createBottomTabNavigator();
 export default function BottomTabNavigator() {
 
@@ -34,6 +35,17 @@ export default function BottomTabNavigator() {
                         tabBarIcon: () => {
                             return (
                                 <Feather name="book-open" size={24} color="black" />
+                            )
+                        }
+                    }} />
+
+                <Tab.Screen
+                    name='Upload'
+                    component={Upload}
+                    options={{
+                        tabBarIcon: () => {
+                            return (
+                                <Feather name="upload" size={24} color="black" />
                             )
                         }
                     }} />
