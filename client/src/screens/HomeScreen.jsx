@@ -11,12 +11,13 @@ import BookCard from '../components/BookCard';
 
 export default function HomeScreen() {
     const [selectedCatagory, setSelectedCatagory] = useState(false);
+
     return (
         <LinearGradient colors={["#FDF0F3", "#FFFBFC"]} style={styles.container}>
             <Header />
             <View style={styles.headerSpacer} />
             <View style={styles.headreImage}>
-                {/* Add your image or content here */}
+                {/* iImage to be added  */}
             </View>
 
             <View style={styles.searchbarContainer}>
@@ -30,31 +31,30 @@ export default function HomeScreen() {
 
             <FlatList
                 numColumns={2}
-                ListHeaderComponent={
-                    <>
-                        <FlatList
-                            data={catagories.default.flatMap(category => category.subCategories)}
-                            renderItem={({ item }) =>
-                                <Catagory item={item}
-                                    selectedCatagory={selectedCatagory}
-                                    setSelectedCatagory={setSelectedCatagory} />}
-                            keyExtractor={(item) => (item.id)}
-                            horizontal={true}
-                            showsHorizontalScrollIndicator={false} />
-                    </>
-                }
-                data={() => { }}
-                renderItem={({ item }) =>
-                    <BookCard />}
+                data={products.default}
+                renderItem={({ item }) => {
+                    console.log('Rendering book card for:', item);
+                    return <BookCard product={item} />;
+                }}
                 keyExtractor={(item) => (item.id)}
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{
+                    paddingBottom: 50
+                }}
+                ListHeaderComponent={
+                    <FlatList
+                        horizontal={true}
+                        showsHorizontalScrollIndicator={false}
+                        data={catagories.default.flatMap(category => category.subCategories)}
+                        renderItem={({ item }) =>
+                            <Catagory item={item}
+                                selectedCatagory={selectedCatagory}
+                                setSelectedCatagory={setSelectedCatagory} />}
+                        keyExtractor={(item) => (item.id)}
 
-                showsHorizontalScrollIndicator={false} />
-
-<View style={{ flexDirection: 'row' }}>
-                <BookCard />
-                <BookCard />
-            </View>
-
+                    />
+                }
+            />
         </LinearGradient>
     );
 }

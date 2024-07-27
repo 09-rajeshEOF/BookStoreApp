@@ -1,8 +1,10 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollViewComponent } from 'react-native'
 import React, { useState } from 'react';
 import { Feather, AntDesign } from '@expo/vector-icons';
+import Button from './Button';
 
 export default function BookCard({product}) {
+  
   const [isLiked, setIsLiked] = useState(false)
   return (
     <TouchableOpacity style={styles.container}>
@@ -22,6 +24,13 @@ export default function BookCard({product}) {
           :
           (<Feather name="heart" size={20} color="#E55B5B" />)}
       </TouchableOpacity>
+      <Button
+      value = {'Order Now'}
+      backgroundColor={'yellow'}
+      height={30}
+      borderRadius={20}
+      width = {'100%'}
+      elevation={5}/>
     </TouchableOpacity>
   )
 }

@@ -92,18 +92,18 @@ export default function Profile() {
                         <AntDesign name="right" size={24} color="black" />
                     </View>
                     <View style={{ padding: 20, justifyContent: "center", flexDirection: "row" }}>
-                    <Button
-                        height={45}
-                        width={45}
-                        borderColor="#ddd"
-                        borderRadius={22}
-                        backgroundColor="#BBF022"
-                        icon="logout"
-                        onPress={() => {}}
-                    />
+                        <Button
+                            height={45}
+                            width={45}
+                            borderColor="#ddd"
+                            borderRadius={22}
+                            backgroundColor="#BBF022"
+                            icon="logout"
+                            onPress={() => { }}
+                        />
+                    </View>
                 </View>
             </View>
-        </View>
         </SafeAreaView >
     )
 }

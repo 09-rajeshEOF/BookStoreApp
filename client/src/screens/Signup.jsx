@@ -63,7 +63,7 @@ export default function Signup({ navigation }) {
           inputBottomColor={'#03bafc'}
         />
 
-    
+
 
         <LinearGradient colors={['#342a1f5', '#03bafc']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} onPress={() => { console.log('Handle OnPress') }}
           style={{ borderRadius: 100, width: 150, alignSelf: 'center', alignItems: 'center', paddingVertical: 5, marginTop: 50, marginBottom: 10 }}>

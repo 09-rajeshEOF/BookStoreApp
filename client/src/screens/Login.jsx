@@ -12,7 +12,7 @@ export default function Login({ navigation }) {
                     height: Dimensions.get('window').height * 0.20, width: '100%',
                     alignItems: 'center',
                     paddingTop: 40,
-                    
+
 
                 }}
             >
@@ -49,9 +49,9 @@ export default function Login({ navigation }) {
                     </Text>
                 </TouchableOpacity>
 
-                <LinearGradient colors={['#342a1f5', '#03bafc']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} onPress = {() => {console.log('Handle OnPress')}}
-                    style = {{borderRadius:100,width:150,alignSelf:'center',alignItems:'center',paddingVertical:5,marginTop:100,marginBottom:10}}>
-                    <Text style = {{color:'white',fontSize:19}}>
+                <LinearGradient colors={['#342a1f5', '#03bafc']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} onPress={() => { console.log('Handle OnPress') }}
+                    style={{ borderRadius: 100, width: 150, alignSelf: 'center', alignItems: 'center', paddingVertical: 5, marginTop: 100, marginBottom: 10 }}>
+                    <Text style={{ color: 'white', fontSize: 19 }}>
                         LOGIN
                     </Text>
                 </LinearGradient>
