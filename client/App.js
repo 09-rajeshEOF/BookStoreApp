@@ -3,10 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import Signup from './src/screens/Signup';
 import Login from './src/screens/Login';
 import GetStarted from './src/screens/GetStarted.jsx';
+import Profile from './src/screens/Profile.jsx';
 
 export default function App() {
   return (
-    <Signup/>
+    <Profile/>
 
   );
 }
