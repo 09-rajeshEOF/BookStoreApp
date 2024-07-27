@@ -1,0 +1,171 @@
+[
+    {
+      "id": 1,
+      "image": "(link unavailable)",
+      "name": "The Great Gatsby",
+      "brand": { "name": "F. Scott Fitzgerald" },
+      "price": 10.99
+    },
+    {
+      "id": 2,
+      "image": "(link unavailable)",
+      "name": "To Kill a Mockingbird",
+      "brand": { "name": "Harper Lee" },
+      "price": 12.99
+    },
+    {
+      "id": 3,
+      "image": "(link unavailable)",
+      "name": "1984",
+      "brand": { "name": "George Orwell" },
+      "price": 9.99
+    },
+    {
+      "id": 4,
+      "image": "(link unavailable)",
+      "name": "The Catcher in the Rye",
+      "brand": { "name": "J.D. Salinger" },
+      "price": 8.99
+    },
+    {
+      "id": 5,
+      "image": "(link unavailable)",
+      "name": "Pride and Prejudice",
+      "brand": { "name": "Jane Austen" },
+      "price": 11.99
+    },
+    {
+      "id": 6,
+      "image": "(link unavailable)",
+      "name": "The Hunger Games",
+      "brand": { "name": "Suzanne Collins" },
+      "price": 13.99
+    },
+    {
+      "id": 7,
+      "image": "(link unavailable)",
+      "name": "The Diary of a Young Girl",
+      "brand": { "name": "Anne Frank" },
+      "price": 10.99
+    },
+    {
+      "id": 8,
+      "image": "(link unavailable)",
+      "name": "The Little Prince",
+      "brand": { "name": "Antoine de Saint-Exupéry" },
+      "price": 9.99
+    },
+    {
+      "id": 9,
+      "image": "(link unavailable)",
+      "name": "The Alchemist",
+      "brand": { "name": "Paulo Coelho" },
+      "price": 12.99
+    },
+    {
+        "id": 10,
+        "image": "(link unavailable)",
+        "name": "The Lord of the Rings",
+        "brand": { "name": "J.R.R. Tolkien" },
+        "price": 14.99
+      },
+      {
+        "id": 11,
+        "image": "(link unavailable)",
+        "name": "The Hitchhiker's Guide to the Galaxy",
+        "brand": { "name": "Douglas Adams" },
+        "price": 10.99
+      },
+      {
+        "id": 12,
+        "image": "(link unavailable)",
+        "name": "The Picture of Dorian Gray",
+        "brand": { "name": "Oscar Wilde" },
+        "price": 11.99
+      },
+      {
+        "id": 13,
+        "image": "(link unavailable)",
+        "name": "War and Peace",
+        "brand": { "name": "Leo Tolstoy" },
+        "price": 15.99
+      },
+      {
+        "id": 14,
+        "image": "(link unavailable)",
+        "name": "Moby-Dick",
+        "brand": { "name": "Herman Melville" },
+        "price": 12.99
+      },
+      {
+        "id": 15,
+        "image": "(link unavailable)",
+        "name": "The Count of Monte Cristo",
+        "brand": { "name": "Alexandre Dumas" },
+        "price": 13.99
+      },
+      {
+        "id": 16,
+        "image": "(link unavailable)",
+        "name": "The Adventures of Sherlock Holmes",
+        "brand": { "name": "Sir Arthur Conan Doyle" },
+        "price": 10.99
+      },
+      {
+        "id": 17,
+        "image": "(link unavailable)",
+        "name": "The Wizard of Oz",
+        "brand": { "name": "L. Frank Baum" },
+        "price": 9.99
+      },
+      {
+        "id": 18,
+        "image": "(link unavailable)",
+        "name": "The Jungle Book",
+        "brand": { "name": "Rudyard Kipling" },
+        "price": 11.99
+      },
+      {
+        "id": 19,
+        "image": "(link unavailable)",
+        "name": "The Secret Garden",
+        "brand": { "name": "Frances Hodgson Burnett" },
+        "price": 10.99
+      },
+      {
+        "id": 20,
+        "image": "(link unavailable)",
+        "name": "Alice's Adventures in Wonderland",
+        "brand": { "name": "Lewis Carroll" },
+        "price": 9.99
+      },
+      {
+        "id": 21,
+        "image": "(link unavailable)",
+        "name": "The Wind in the Willows",
+        "brand": { "name": "Kenneth Grahame" },
+        "price": 11.99
+      },
+      {
+        "id": 22,
+        "image": "(link unavailable)",
+        "name": "The Tale of Peter Rabbit",
+        "brand": { "name": "Beatrix Potter" },
+        "price": 8.99
+      },
+      {
+        "id": 23,
+        "image": "(link unavailable)",
+        "name": "The Cat in the Hat",
+        "brand": { "name": "Dr. Seuss" },
+        "price": 12.99
+      },
+      {
+        "id": 24,
+        "image": "(link unavailable)",
+        "name": "Green Eggs and Ham",
+        "brand": { "name": "Dr. Seuss" },
+        "price": 10.99
+      }
+    ]
+    

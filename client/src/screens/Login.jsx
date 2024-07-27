@@ -12,6 +12,7 @@ export default function Login({ navigation }) {
                     height: Dimensions.get('window').height * 0.20, width: '100%',
                     alignItems: 'center',
                     paddingTop: 40,
+                    
 
                 }}
             >
@@ -31,6 +32,7 @@ export default function Login({ navigation }) {
                     title='Username'
                     placeholder='Enter your Username'
                     keyboard={'default'}
+                    inputBottomColor={'#03bafc'}
                 />
 
                 <Input
@@ -38,6 +40,7 @@ export default function Login({ navigation }) {
                     placeholder='Enter your Password'
                     keyboard={'default'}
                     isPassword={true}
+                    inputBottomColor={'#03bafc'}
                 />
 
                 <TouchableOpacity style={{ color: '#03bafc', textAlign: "right", fontSize: 16 }}>

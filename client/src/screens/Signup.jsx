@@ -31,24 +31,28 @@ export default function Signup({ navigation }) {
           title='Email'
           placeholder='jhonwick@email.com'
           keyboard="email-address"
+          inputBottomColor={'#03bafc'}
         />
 
         <Input
           title='Username'
           placeholder='Enter your Username'
           keyboard={'default'}
+          inputBottomColor={'#03bafc'}
         />
 
         <Input
           title='Contact Number'
           placeholder='+91-9695*******'
           keyboard="number-pad"
+          inputBottomColor={'#03bafc'}
         />
         <Input
           title='Password'
           placeholder='r@#gyuasgdyu867'
           keyboard={'default'}
           isPassword={true}
+          inputBottomColor={'#03bafc'}
         />
 
         <Input
@@ -56,6 +60,7 @@ export default function Signup({ navigation }) {
           placeholder='r@#gyuasgdyu867'
           keyboard={'default'}
           isPassword={true}
+          inputBottomColor={'#03bafc'}
         />
 
     

@@ -1,8 +1,8 @@
 import React from 'react';
-import { View,Text, Image, TouchableOpacity, SafeAreaView, TextInput } from 'react-native';
+import { View, Text, Image, TouchableOpacity, SafeAreaView, TextInput } from 'react-native';
 import { StyleSheet } from 'react-native';
-
-const Button = ({ buttonTextHeight,height, width, borderColor, borderRadius, backgroundColor, value, onPress }) => {
+import AntDesign from '@expo/vector-icons/AntDesign';
+const Button = ({ icon, buttonTextHeight, height, width, borderColor, borderRadius, backgroundColor, value, onPress }) => {
   return (
     <TouchableOpacity
       style={{
@@ -16,9 +16,12 @@ const Button = ({ buttonTextHeight,height, width, borderColor, borderRadius, bac
       }}
       onPress={onPress}
     >
-      <Text style = {{
-        fontSize:buttonTextHeight
+      <Text style={{
+        fontSize: buttonTextHeight
       }}>{value}</Text>
+      <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+        <AntDesign name={icon} size={24} color="black" />
+      </View>
     </TouchableOpacity>
   );
 };

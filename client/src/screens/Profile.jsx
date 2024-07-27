@@ -1,7 +1,8 @@
 import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, Image, View } from 'react-native'
 import React from 'react'
 import Button from '../components/Button';
-import AntDesign from '@expo/vector-icons/AntDesign';
+import { AntDesign, Entypo, MaterialCommunityIcons, FontAwesome6, MaterialIcons } from '@expo/vector-icons';
+
 
 const PFP = "";
 
@@ -28,45 +29,82 @@ export default function Profile() {
                         Bhubaneswar,Gopabandhu Street, 751001
                     </Text>
                 </View>
-                <View style={styles.options}>
+                <View style={styles.optionsContainer}>
+                    <View style={{ paddingTop: 10 }}></View>
+                    <View style={styles.option}>
+                        <MaterialCommunityIcons name="account-circle" size={24} color="black" />
+                        <Button
+                            height={70}
+                            buttonTextHeight={25}
+                            width="80%"
+                            borderColor="#ddd"
+                            borderRadius={10}
+                            backgroundColor="#fff"
+                            value="Accounts"
+                            onPress={() => console.log('Option 1 pressed')}
+                        />
+                        <AntDesign name="right" size={24} color="black" />
+                    </View>
+
+                    <View style={styles.option}>
+                        <Entypo name="dropbox" size={24} color="black" />
+                        <Button
+                            height={70}
+                            buttonTextHeight={25}
+                            width="80%"
+                            borderColor="#ddd"
+                            borderRadius={10}
+                            backgroundColor="#fff"
+                            value="Your Orders"
+                            onPress={() => console.log('Option 2 pressed')}
+                        />
+                        <AntDesign name="right" size={24} color="black" />
+                    </View>
+
+                    <View style={styles.option}>
+                        <FontAwesome6 name="gear" size={24} color="black" />
+                        <Button
+                            height={70}
+                            width="80%"
+                            buttonTextHeight={25}
+                            borderColor="#ddd"
+                            borderRadius={10}
+                            backgroundColor="#fff"
+                            value="Settings"
+                            onPress={() => console.log('Option 3 pressed')}
+                        />
+                        <AntDesign name="right" size={24} color="black" />
+                    </View>
+
+
+                    <View style={styles.option}>
+                        <MaterialIcons name="feedback" size={24} color="black" />
+                        <Button
+                            height={70}
+                            width="80%"
+                            buttonTextHeight={25}
+                            borderColor="#ddd"
+                            borderRadius={10}
+                            backgroundColor="#fff"
+                            value="Feedback"
+                            onPress={() => console.log('Option 4 pressed')}
+                        />
+                        <AntDesign name="right" size={24} color="black" />
+                    </View>
+                    <View style={{ padding: 20, justifyContent: "center", flexDirection: "row" }}>
                     <Button
-                        value='Edit Profile'
-                        buttonTextHeight={25}
-                        height={70}
+                        height={45}
+                        width={45}
                         borderColor="#ddd"
-                        borderRadius={10}
-                        backgroundColor="#fff" />
-                    <Button
-                        value='Accounts'
-                        buttonTextHeight={25}
-                        height={70}
-                        borderColor="#ddd"
-                        borderRadius={10}
-                        backgroundColor="#fff" />
-                    <Button
-                        value='Accounts'
-                        buttonTextHeight={25}
-                        height={70}
-                        borderColor="#ddd"
-                        borderRadius={10}
-                        backgroundColor="#fff" />
-                    <Button
-                        value='Orders'
-                        buttonTextHeight={25}
-                        height={70}
-                        borderColor="#ddd"
-                        borderRadius={10}
-                        backgroundColor="#fff" />
-                    <Button
-                        value='LogOut'
-                        buttonTextHeight={25}
-                        height={70}
-                        borderColor="#ddd"
-                        borderRadius={10}
-                        backgroundColor="#fff" />
+                        borderRadius={22}
+                        backgroundColor="#BBF022"
+                        icon="logout"
+                        onPress={() => {}}
+                    />
                 </View>
             </View>
-        </SafeAreaView>
+        </View>
+        </SafeAreaView >
     )
 }
 
@@ -114,10 +152,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-    options: {
-        justifyContent:'center',
-        alignItems:'center',
-        elevation:10,
-        backgroundColor:'#faebd7'
-    }
+    optionsContainer: {
+
+    },
+    option: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingTop: 1,
+        alignItems: 'center',
+        marginHorizontal: .5,
+        justifyContent: 'center',
+        width: '98%',
+        backgroundColor: "#fff",
+        borderColor: '#ddd',
+        borderRadius: 10,
+        marginTop: 4,
+    },
 })

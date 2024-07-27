@@ -4,10 +4,12 @@ import Signup from './src/screens/Signup';
 import Login from './src/screens/Login';
 import GetStarted from './src/screens/GetStarted.jsx';
 import Profile from './src/screens/Profile.jsx';
+import BookList from './src/screens/BookList.jsx';
+import BottomTabNavigator from './BottomTabNavigator.jsx';
 
 export default function App() {
   return (
-    <Profile/>
+    <BottomTabNavigator/>
 
   );
 }

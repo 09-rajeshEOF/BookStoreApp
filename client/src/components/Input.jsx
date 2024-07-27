@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View,TextInput } from 'react-native'
 import React from 'react'
+const inputRef = React.createRef();
 
-export default function Input({title,placeholder,keyboard,isPassword}) {
+export default function Input({inputBottomColor,title,placeholder,keyboard,isPassword}) {
     return (
         <View style={{ marginVertical: 10 }} >
             <Text style={{ fontSize: 16, color: '#03bafc' }}>
@@ -12,13 +13,16 @@ export default function Input({title,placeholder,keyboard,isPassword}) {
                 placeholder={placeholder}
                 placeholderTextColor='grey'
                 style={{
-                    borderBottomColor: '#03bafc',
+                    borderBottomColor:inputBottomColor || 'transparent', 
                     borderBottomWidth: 1,
                     paddingVertical: 0,
                     marginTop: 5,
+                    
                 }}
                 secureTextEntry={isPassword}
                 keyboardType={keyboard}
+                onFocus={() => inputRef.current.focus()}
+
             />
         </View>
     )
