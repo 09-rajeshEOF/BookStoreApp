@@ -1,171 +1,383 @@
 [
-    {
-      "id": 1,
-      "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-      "name": "The Great Gatsby",
-      "brand": { "name": "F. Scott Fitzgerald" },
-      "price": 10.99
+  {
+    "id": 1,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR5pt5fs3a9wvfBzGOQB1qCeK0lGMGvEzi3w&s",
+    "title": "The Great Gatsby",
+    "description": "abcd",
+    "brand": {
+      "author": "F. Scott Fitzgerald"
     },
-    {
-      "id": 2,
-      "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-      "name": "To Kill a Mockingbird",
-      "brand": { "name": "Harper Lee" },
-      "price": 12.99
+    "price": 10.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
     },
-    {
-      "id": 3,
-      "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-      "name": "1984",
-      "brand": { "name": "George Orwell" },
-      "price": 9.99
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 2,
+    "image": "https://media.glamour.com/photos/56e1f3c462b398fa64cbd30b/master/w_1600%2Cc_limit/entertainment-2016-02-17-main.jpg",
+    "title": "To Kill a Mockingbird",
+    "description": "abcd",
+    "brand": {
+      "author": "Harper Lee"
     },
-    {
-      "id": 4,
-      "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-      "name": "The Catcher in the Rye",
-      "brand": { "name": "J.D. Salinger" },
-      "price": 8.99
+    "price": 12.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
     },
-    {
-      "id": 5,
-      "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-      "name": "Pride and Prejudice",
-      "brand": { "name": "Jane Austen" },
-      "price": 11.99
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 3,
+    "image": "https://penguinseriesdesign.com/wp-content/uploads/2018/03/signet-1984-21.jpg",
+    "title": "1984",
+    "description": "abcd",
+    "brand": {
+      "author": "George Orwell"
     },
-    {
-      "id": 6,
-      "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-      "name": "The Hunger Games",
-      "brand": { "name": "Suzanne Collins" },
-      "price": 13.99
+    "price": 9.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
     },
-    {
-      "id": 7,
-      "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-      "name": "The Diary of a Young Girl",
-      "brand": { "name": "Anne Frank" },
-      "price": 10.99
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 4,
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/80341619846549.562e1421640e3.jpg",
+    "title": "The Catcher in the Rye",
+    "description": "abcd",
+    "brand": {
+      "author": "J.D. Salinger"
     },
-    {
-      "id": 8,
-      "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-      "name": "The Little Prince",
-      "brand": { "name": "Antoine de Saint-Exupéry" },
-      "price": 9.99
+    "price": 8.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
     },
-    {
-      "id": 9,
-      "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-      "name": "The Alchemist",
-      "brand": { "name": "Paulo Coelho" },
-      "price": 12.99
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 5,
+    "image": "https://rukminim2.flixcart.com/image/850/1000/kkec4280/book/d/h/d/pride-prejudice-original-imafzra6pfewjjwb.jpeg?q=90&crop=false",
+    "title": "Pride and Prejudice",
+    "description": "abcd",
+    "brand": {
+      "author": "Jane Austen"
     },
-    {
-        "id": 10,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Lord of the Rings",
-        "brand": { "name": "J.R.R. Tolkien" },
-        "price": 14.99
-      },
-      {
-        "id": 11,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Hitchhiker's Guide to the Galaxy",
-        "brand": { "name": "Douglas Adams" },
-        "price": 10.99
-      },
-      {
-        "id": 12,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Picture of Dorian Gray",
-        "brand": { "name": "Oscar Wilde" },
-        "price": 11.99
-      },
-      {
-        "id": 13,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "War and Peace",
-        "brand": { "name": "Leo Tolstoy" },
-        "price": 15.99
-      },
-      {
-        "id": 14,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "Moby-Dick",
-        "brand": { "name": "Herman Melville" },
-        "price": 12.99
-      },
-      {
-        "id": 15,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Count of Monte Cristo",
-        "brand": { "name": "Alexandre Dumas" },
-        "price": 13.99
-      },
-      {
-        "id": 16,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Adventures of Sherlock Holmes",
-        "brand": { "name": "Sir Arthur Conan Doyle" },
-        "price": 10.99
-      },
-      {
-        "id": 17,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Wizard of Oz",
-        "brand": { "name": "L. Frank Baum" },
-        "price": 9.99
-      },
-      {
-        "id": 18,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Jungle Book",
-        "brand": { "name": "Rudyard Kipling" },
-        "price": 11.99
-      },
-      {
-        "id": 19,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Secret Garden",
-        "brand": { "name": "Frances Hodgson Burnett" },
-        "price": 10.99
-      },
-      {
-        "id": 20,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "Alice's Adventures in Wonderland",
-        "brand": { "name": "Lewis Carroll" },
-        "price": 9.99
-      },
-      {
-        "id": 21,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Wind in the Willows",
-        "brand": { "name": "Kenneth Grahame" },
-        "price": 11.99
-      },
-      {
-        "id": 22,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Tale of Peter Rabbit",
-        "brand": { "name": "Beatrix Potter" },
-        "price": 8.99
-      },
-      {
-        "id": 23,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "The Cat in the Hat",
-        "brand": { "name": "Dr. Seuss" },
-        "price": 12.99
-      },
-      {
-        "id": 24,
-        "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
-        "name": "Green Eggs and Ham",
-        "brand": { "name": "Dr. Seuss" },
-        "price": 10.99
-      }
-    ]
-    
+    "price": 11.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 6,
+    "image": "https://m.media-amazon.com/images/I/71WSzS6zvCL._AC_UF1000,1000_QL80_.jpg",
+    "title": "The Hunger Games",
+    "description": "abcd",
+    "brand": {
+      "author": "Suzanne Collins"
+    },
+    "price": 13.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 7,
+    "image": "https://m.media-amazon.com/images/I/71qeWx83sxL._AC_UF1000,1000_QL80_.jpg",
+    "title": "The Diary of a Young Girl",
+    "description": "abcd",
+    "brand": {
+      "author": "Anne Frank"
+    },
+    "price": 10.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 8,
+    "image": "https://cdn.kobo.com/book-images/6a33c46b-8bca-4b8e-9bd5-de603a032b49/1200/1200/False/the-little-prince-43.jpg",
+    "title": "The Little Prince",
+    "description": "abcd",
+    "brand": {
+      "author": "Antoine de Saint-Exupéry"
+    },
+    "price": 9.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 9,
+    "image": "https://cdn.kobo.com/book-images/32ad8373-9cc5-4c4f-aa82-8155edbc7029/1200/1200/False/the-alchemist-a-graphic-novel.jpg",
+    "title": "The Alchemist",
+    "description": "abcd",
+    "brand": {
+      "author": "Paulo Coelho"
+    },
+    "price": 12.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 10,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl6YmuwgBf-0PPh-aQO-EKa-dVf-01CSx6UA&s",
+    "title": "The Lord of the Rings",
+    "description": "abcd",
+    "brand": {
+      "author": "J.R.R. Tolkien"
+    },
+    "price": 14.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+  },
+  {
+    "id": 11,
+    "image": "https://assets-eu-01.kc-usercontent.com/bcd02f72-b50c-0179-8b4b-5e44f5340bd4/0731ccbe-23bb-43a5-9e0e-9a33fbc9213f/hitchhikers-guide-to-the-galaxy-42nd-anniversary-cover.jpg?w=660&h=1000&auto=format&bg=%23efefef&fit=crop",
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "description": "abcd",
+    "brand": {
+      "author": "Douglas Adams"
+    },
+    "price": 10.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+  },
+  {
+    "id": 12,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdvIXO1kQX8RI7ttHPGxzmJF5pCYoUM3FF2w&s",
+    "title": "The Picture of Dorian Gray",
+    "description": "abcd",
+    "brand": {
+      "author": "Oscar Wilde"
+    },
+    "price": 11.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+  },
+  {
+    "id": 13,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1OAP8nET6r62AQlUMdXjwPiQ-q8Qkgtr5IQ&s",
+    "title": "War and Peace",
+    "description": "abcd",
+    "brand": {
+      "author": "Leo Tolstoy"
+    },
+    "price": 15.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 14,
+    "image": "https://m.media-amazon.com/images/I/61iwE2SfFnL._AC_UF1000,1000_QL80_.jpg",
+    "title": "Moby-Dick",
+    "description": "abcd",
+    "brand": {
+      "author": "Herman Melville"
+    },
+    "price": 12.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 15,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "The Count of Monte Cristo",
+    "description": "abcd",
+    "brand": {
+      "author": "Alexandre Dumas"
+    },
+    "price": 13.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 16,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "The Adventures of Sherlock Holmes",
+    "description": "abcd",
+    "brand": {
+      "author": "Sir Arthur Conan Doyle"
+    },
+    "price": 10.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 17,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "The Wizard of Oz",
+    "description": "abcd",
+    "brand": {
+      "author": "L. Frank Baum"
+    },
+    "price": 9.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 18,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "The Jungle Book",
+    "description": "abcd",
+    "brand": {
+      "author": "Rudyard Kipling"
+    },
+    "price": 11.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 19,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "The Secret Garden",
+    "description": "abcd",
+    "brand": {
+      "author": "Frances Hodgson Burnett"
+    },
+    "price": 10.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 20,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "Alice's Adventures in Wonderland",
+    "description": "abcd",
+    "brand": {
+      "author": "Lewis Carroll"
+    },
+    "price": 9.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 21,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "The Wind in the Willows",
+    "description": "abcd",
+    "brand": {
+      "author": "Kenneth Grahame"
+    },
+    "price": 11.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 22,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "The Tale of Peter Rabbit",
+    "description": "abcd",
+    "brand": {
+      "author": "Beatrix Potter"
+    },
+    "price": 8.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 23,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "The Cat in the Hat",
+    "description": "abcd",
+    "brand": {
+      "author": "Dr. Seuss"
+    },
+    "price": 12.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  },
+  {
+    "id": 24,
+    "image": "https://marketplace.canva.com/EAFfSnGl7II/2/0/1003w/canva-elegant-dark-woods-fantasy-photo-book-cover-vAt8PH1CmqQ.jpg",
+    "title": "Green Eggs and Ham",
+    "description": "abcd",
+    "brand": {
+      "author": "Dr. Seuss"
+    },
+    "price": 10.99,
+    "availability": {
+      "status": "in stock",
+      "quantity": 5
+    },
+    "date": "2024-07-28T08:05:27.435Z"
+
+  }
+]

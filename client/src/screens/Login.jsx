@@ -2,6 +2,7 @@ import { Dimensions, StyleSheet, Text, TextInput, TouchableOpacity, View } from 
 import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import Input from '../components/Input'
+import Button from '../components/Button'
 export default function Login({ navigation }) {
     return (
         <View>
@@ -50,10 +51,17 @@ export default function Login({ navigation }) {
                 </TouchableOpacity>
 
                 <LinearGradient colors={['#342a1f5', '#03bafc']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} onPress={() => { console.log('Handle OnPress') }}
-                    style={{ borderRadius: 100, width: 150, alignSelf: 'center', alignItems: 'center', paddingVertical: 5, marginTop: 100, marginBottom: 10 }}>
-                    <Text style={{ color: 'white', fontSize: 19 }}>
-                        LOGIN
-                    </Text>
+                    style={{ borderRadius: 100, alignSelf: 'center', alignItems: 'center', paddingVertical: 5, marginTop: 100, marginBottom: 10 }}>
+                    <Button
+                        value={ 'LogIn'}
+                        backgroundColor={'yellow'}
+                        height={40}
+                        borderRadius={20}
+                        width={140}
+                        elevation={5}
+                        onPress={() => navigation.navigate('HomeBottomTab')}
+
+                    />
                 </LinearGradient>
                 <Text style={{ color: '#03bafc', textAlign: "center", fontSize: 17 }}>
                     Don't have an account ?{'  '}

@@ -34,7 +34,7 @@ export default function HomeScreen() {
                 data={products.default}
                 renderItem={({ item }) => {
                     console.log('Rendering book card for:', item);
-                    return <BookCard product={item} />;
+                    return <BookCard product={item} isOrderScreen={false}/>;
                 }}
                 keyExtractor={(item) => (item.id)}
                 showsVerticalScrollIndicator={false}

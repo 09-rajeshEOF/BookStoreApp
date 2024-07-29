@@ -1,12 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, Image, ScrollView, StyleSheet } from 'react-native';
+import uuid from 'react-native-uuid';
+import { View, Text, TouchableOpacity, Image, ScrollView, StyleSheet, Button } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { launchImageLibrary } from 'react-native-image-picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import Input from '../components/Input';
+import Entypo from 'react-native-vector-icons/Entypo';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function Upload() {
+  const idKey = 'id';
+
+  const getId = async () => {
+    try {
+      const storedId = await AsyncStorage.getItem(idKey);
+      return storedId ? parseInt(storedId) : 0;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const setId = async (newId) => {
+    try {
+      await AsyncStorage.setItem(idKey, newId.toString());
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
+  const clearAsyncStorage = async () => {
+    await AsyncStorage.clear();
+  };
+
+
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [description, setDescription] = useState('');
@@ -15,32 +43,70 @@ export default function Upload() {
   const [image, setImage] = useState(null);
   const [showDatePicker, setShowDatePicker] = useState(false);
 
-  const handleUpload = async () => {
-    try {
-      // Store data locally using AsyncStorage  
-      await AsyncStorage.setItem('title', title);
-      await AsyncStorage.setItem('author', author);
-      await AsyncStorage.setItem('description', description);
-      await AsyncStorage.setItem('date', date.toISOString());
-      await AsyncStorage.setItem('availability', availability);
-      await AsyncStorage.setItem('image', image);
 
-      console.log('Data stored successfully!');
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const storedBooks = await AsyncStorage.getItem('books');
+        if (storedBooks) {
+          const books = JSON.parse(storedBooks);
+          setTitle(books[0].title ?? '');
+          setAuthor(books[0].brand.author ?? '');
+          setDescription(books[0].description ?? '');
+          setDate(books[0].date ? new Date(books[0].date) : new Date());
+          setAvailability(books[0].availability.quantity ?? '');
+          setImage(books[0].image ?? null);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
+
+
+  useEffect(() => {
+    console.log('State updated:', title, author, description, date, availability, image);
+  }, [title, author, description, date, availability, image]);
+
+  const handleUpload = async (books) => {
+    try {
+      const currentId = await getId();
+      const newBook = {
+        id: currentId + 1,
+        image,
+        title,
+        description,
+        brand: { author },
+        price: 10.99,
+        availability: { quantity: parseInt(availability) },
+        date,
+      };
+      const storedBooks = await AsyncStorage.getItem('books');
+      const updatedBooks = storedBooks ? JSON.parse(storedBooks) : [];
+      updatedBooks.push(newBook);
+      await AsyncStorage.setItem('books', JSON.stringify(updatedBooks));
+      await setId(currentId + 1);
+      console.log('Data saved to AsyncStorage successfully!');
+      printAsyncStorageContent();
     } catch (error) {
       console.error(error);
     }
   };
 
-  const handleImageUpload = async () => {
-    // Use react-native-image-picker to select an image  
-    const response = await launchImageLibrary({
-      mediaType: 'photo',
-      selectionLimit: 1,
-    });
 
-    if (response.assets) {
-      setImage(response.assets[0].uri);
+  const printAsyncStorageContent = async () => {
+    try {
+      const storedBooks = await AsyncStorage.getItem('books');
+      console.log(JSON.parse(storedBooks));
+    } catch (error) {
+      console.error(error);
     }
+  };
+
+
+  const handleImageLink = async (link) => {
+    setImage(link);
   };
 
   const handleDateChange = (event, selectedDate) => {
@@ -48,31 +114,6 @@ export default function Upload() {
     setShowDatePicker(false);
     setDate(currentDate);
   };
-
-  useEffect(() => {
-    // Retrieve data from AsyncStorage when the component mounts  
-    const fetchData = async () => {
-      try {
-        const storedTitle = await AsyncStorage.getItem('title');
-        const storedAuthor = await AsyncStorage.getItem('author');
-        const storedDescription = await AsyncStorage.getItem('description');
-        const storedDate = await AsyncStorage.getItem('date');
-        const storedAvailability = await AsyncStorage.getItem('availability');
-        const storedImage = await AsyncStorage.getItem('image');
-
-        setTitle(storedTitle);
-        setAuthor(storedAuthor);
-        setDescription(storedDescription);
-        setDate(new Date(storedDate));
-        setAvailability(storedAvailability);
-        setImage(storedImage);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   return (
     <ScrollView>
@@ -130,27 +171,37 @@ export default function Upload() {
             value={availability}
             onChangeText={(text) => setAvailability(text)}
           />
-
           <View style={styles.imageContainer}>
             <Text style={styles.label}>Image</Text>
-            <TouchableOpacity onPress={handleImageUpload}>
-              {image ? (
-                <Image
-                  source={{
-                    uri: image,
-                  }}
-                  style={styles.image}
-                />
-              ) : (
-                <View style={styles.imagePlaceholder} />
-              )}
-            </TouchableOpacity>
+            <Input
+              title="Image Link"
+              placeholder="Enter image link"
+              value={image}
+              onChangeText={(text) => handleImageLink(text)}
+            />
+            {image ? (
+              <Image source={{ uri: image }} style={styles.image} />
+            ) : (
+              <View style={styles.imagePlaceholder} />
+            )}
           </View>
-        </View>
 
-        <TouchableOpacity onPress={handleUpload}>
+
+        </View>
+        <TouchableOpacity onPress={() => handleUpload([{
+          image,
+          title,
+          description,
+          author,
+          price: 10.99,
+          availability: { quantity: parseInt(availability) },
+          date,
+        }])}>
           <Text style={styles.uploadText}>Upload Book</Text>
         </TouchableOpacity>
+
+        <Button title="Clear" onPress={clearAsyncStorage} />
+
       </LinearGradient>
     </ScrollView>
   );

@@ -14,9 +14,9 @@ const Tab = createBottomTabNavigator();
 export default function BottomTabNavigator() {
 
     return (
-        <NavigationContainer>
+        
             <Tab.Navigator screenOptions={{
-                headerShown: false,
+                headerShown:false,
             }}>
                 <Tab.Screen
                     name='Home'
@@ -29,7 +29,7 @@ export default function BottomTabNavigator() {
                         }
                     }} />
                 <Tab.Screen
-                    name='Books'
+                    name='Your Books'
                     component={BookList}
                     options={{
                         tabBarIcon: () => {
@@ -50,7 +50,7 @@ export default function BottomTabNavigator() {
                         }
                     }} />
                 <Tab.Screen
-                    name='Orders'
+                    name='My Orders'
                     component={Orders}
                     options={{
                         tabBarIcon: () => {
@@ -72,7 +72,7 @@ export default function BottomTabNavigator() {
                     }} />
 
             </Tab.Navigator>
-        </NavigationContainer>
+     
     )
 }
 

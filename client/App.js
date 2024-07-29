@@ -6,10 +6,14 @@ import GetStarted from './src/screens/GetStarted.jsx';
 import Profile from './src/screens/Profile.jsx';
 import BookList from './src/screens/BookList.jsx';
 import BottomTabNavigator from './BottomTabNavigator.jsx';
+import { ContextProvider } from './src/service/context/BookContext.js';
+import StackNavigator from './StackNavigator.jsx';
 
 export default function App() {
   return (
-    <BottomTabNavigator/>
+    <ContextProvider>
+      <StackNavigator />
+    </ContextProvider>
 
   );
 }

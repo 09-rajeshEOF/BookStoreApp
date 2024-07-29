@@ -1,20 +1,24 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollViewComponent } from 'react-native'
-import React, { useState } from 'react';
+import React, { useState, useContext, useReducer, createContext } from 'react';
 import { Feather, AntDesign } from '@expo/vector-icons';
 import Button from './Button';
+import { Context } from '../service/context/BookContext';
+export default function BookCard({ product ,buttonText,isOrderScreen}) {
 
-export default function BookCard({product}) {
-  
   const [isLiked, setIsLiked] = useState(false)
+  const { dispatch } = useContext(Context);
+  function proceedWithOrder(){
+    console.log('Not Available');
+  }
   return (
     <TouchableOpacity style={styles.container}>
-      <Image source={require('./../../assets/CoverImages/into-the-shadows.png')}
+      <Image source={{ uri: product.image }}
         style={styles.CoverImage} />
-      <Text style={styles.title}>
-        {product.name}
+      <Text style={styles.title} numberOfLines={1}>
+        {product.title}
       </Text>
       <Text style={styles.publisher}>
-        {product.brand.name}
+        {product.brand.author}
       </Text>
       <Text style={styles.price}>
         ${product.price}
@@ -23,14 +27,17 @@ export default function BookCard({product}) {
         {isLiked ? (<AntDesign name="heart" size={24} color="#E55B5B" />)
           :
           (<Feather name="heart" size={20} color="#E55B5B" />)}
-      </TouchableOpacity>
+      </TouchableOpacity >
       <Button
-      value = {'Order Now'}
-      backgroundColor={'yellow'}
-      height={30}
-      borderRadius={20}
-      width = {'100%'}
-      elevation={5}/>
+        value={buttonText ||'Order Now'}
+        backgroundColor={'orange'}
+        height={30}
+        borderRadius={20}
+        width={'100%'}
+        elevation={5}
+        onPress={() => isOrderScreen ? proceedWithOrder() : dispatch({ type: 'ADD_ORDER', payload: product })} 
+
+         />
     </TouchableOpacity>
   )
 }
@@ -60,7 +67,7 @@ const styles = StyleSheet.create({
   },
   heart: {
     left: 135,
-    bottom: 290,
+    bottom: 320,
     height: 30,
     width: 30,
     position: 'absolute',
